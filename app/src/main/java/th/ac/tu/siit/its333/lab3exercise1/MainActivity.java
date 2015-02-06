@@ -17,6 +17,7 @@ import java.util.List;
 
 public class MainActivity extends ActionBarActivity {
 
+    
     int cr = 0;         // Credits
     double gp = 0.0;    // Grade points
     double gpa = 0.0;   // Grade point average
