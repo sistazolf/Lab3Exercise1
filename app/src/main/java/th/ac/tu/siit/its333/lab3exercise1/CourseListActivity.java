@@ -1,17 +1,33 @@
 package th.ac.tu.siit.its333.lab3exercise1;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 public class CourseListActivity extends ActionBarActivity {
+
+    String input;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_list);
+
+        // Get the intent used to create this activity
+        Intent i = this.getIntent();
+        // Get a string value named "value1"
+        input = i.getStringExtra("list");
+
+        TextView list = (TextView)findViewById(R.id.tvList);
+        list.setText(input);
+
     }
 
 
@@ -36,4 +52,6 @@ public class CourseListActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
